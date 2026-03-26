@@ -1,37 +1,36 @@
-import { AlertTriangle } from 'lucide-react';
+import { Coffee } from 'lucide-react';
 
 export default function Problem() {
   return (
-    <section className="bg-slate-50 py-24">
+    <section className="py-24 bg-[#FAF9F6]">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-600 mb-8">
-            <AlertTriangle className="w-8 h-8" />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#F4DCD6] text-[#D47A6A] mb-8">
+            <Coffee className="w-8 h-8" strokeWidth={1.5} />
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
-            Are You Feeling Overwhelmed, Scared, and Unsure of What to Do Next?
+          <h2 className="text-4xl md:text-5xl font-serif mb-6 text-[#2C363F]">
+            Take a deep breath. <br/>We can figure this out.
           </h2>
           
-          <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-            When you're facing a serious legal issue, the weight of the world is on your shoulders. 
-            The legal system is confusing, unforgiving, and designed to work against you if you don't know the rules.
+          <p className="text-lg md:text-xl text-[#6B7280] mb-12 leading-relaxed">
+            The legal system is intimidating, confusing, and stressful. You might be losing sleep over what happens next, worrying about your family, your job, or your reputation. You don't have to carry this weight alone.
           </p>
           
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-left">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">You might be worried about:</h3>
-            <ul className="space-y-4">
+          <div className="bg-white p-8 md:p-10 rounded-3xl soft-shadow text-left border border-[#E5E7EB]">
+            <h3 className="text-2xl font-serif text-[#2C363F] mb-6">We understand the anxiety of:</h3>
+            <ul className="space-y-5">
               {[
-                "Losing your freedom, your job, or your reputation.",
-                "Saying the wrong thing to investigators or insurance adjusters.",
-                "Drowning in medical bills or legal fees you can't afford.",
-                "The impact this will have on your family's future."
+                "Not knowing what to say to authorities or insurance companies.",
+                "Fearing the long-term impact on your permanent record.",
+                "Worrying about hidden fees and unpredictable legal costs.",
+                "Feeling like just another case file in a broken system."
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-sm font-bold">✕</span>
+                <li key={i} className="flex items-start gap-4">
+                  <div className="w-6 h-6 rounded-full bg-[#E8EFEA] text-[#819E8E] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-sm font-medium">✓</span>
                   </div>
-                  <span className="text-lg text-slate-700">{item}</span>
+                  <span className="text-[#4B5563] leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>

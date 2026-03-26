@@ -1,77 +1,54 @@
-import { Star, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
 
 export default function SocialProof() {
   const testimonials = [
     {
       name: "Ghulam Hussain",
       case: "DUI Defense",
-      quote: "I thought my life was over after my arrest. Shahan Law Hub got my charges completely dismissed. They saved my job and my family.",
+      quote: "I was terrified of what would happen to my family. The team at Shahan Law didn't just handle my case brilliantly, they treated me with dignity when I felt my lowest. Case dismissed.",
     },
     {
       name: "Aliya Bibi",
       case: "Personal Injury",
-      quote: "The insurance company offered me pennies. Shahan Law fought them in court and secured a $1.2M settlement. They are relentless.",
+      quote: "After my accident, I was overwhelmed by medical bills and insurance calls. They stepped in, took all the stress away, and got me a settlement that actually covered my needs.",
     },
     {
       name: "Neelam Mahmood",
-      case: "Divorce & Custody",
-      quote: "I was terrified of losing my kids. My attorney at Shahan Law was a bulldog in the courtroom but compassionate with me. I got full custody.",
+      case: "Family Law",
+      quote: "Going through a custody battle is heartbreaking. My attorney was incredibly empathetic to my situation but fiercely protective of my rights in court. I couldn't have asked for better support.",
     }
   ];
 
   return (
-    <section id="reviews" className="bg-slate-900 text-white py-24">
+    <section id="reviews" className="py-24 bg-[#FAF9F6]">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-            Don't Just Take Our Word For It
+          <h2 className="text-4xl md:text-5xl font-serif text-[#2C363F] mb-6">
+            Stories of moving forward
           </h2>
-          <p className="text-xl text-slate-300">
-            We measure our success by the lives we've changed. Read what our past clients have to say about our aggressive representation.
+          <p className="text-xl text-[#6B7280]">
+            Real people who trusted us to help them through their toughest moments.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, i) => (
-            <div key={i} className="bg-slate-800 p-8 rounded-xl border border-slate-700 relative">
-              <Quote className="absolute top-6 right-6 w-12 h-12 text-slate-700/50" />
-              <div className="flex text-amber-500 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-current" />
-                ))}
-              </div>
-              <p className="text-lg text-slate-300 mb-8 italic leading-relaxed relative z-10">
+            <div key={i} className="bg-white p-10 rounded-3xl border border-[#E5E7EB] relative soft-shadow">
+              <Quote className="w-10 h-10 text-[#E8EFEA] mb-6" fill="currentColor" />
+              <p className="text-lg text-[#4B5563] mb-8 leading-relaxed">
                 "{testimonial.quote}"
               </p>
-              <div>
-                <p className="font-bold text-white text-lg">{testimonial.name}</p>
-                <p className="text-amber-500 text-sm font-medium uppercase tracking-wider">{testimonial.case}</p>
+              <div className="flex items-center gap-4 border-t border-[#E5E7EB] pt-6">
+                <div className="w-12 h-12 bg-[#F4DCD6] rounded-full flex items-center justify-center text-[#D47A6A] font-serif font-bold text-xl">
+                  {testimonial.name.charAt(0)}
+                </div>
+                <div>
+                  <p className="font-serif font-medium text-[#2C363F]">{testimonial.name}</p>
+                  <p className="text-[#819E8E] text-sm font-medium">{testimonial.case}</p>
+                </div>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-4 bg-slate-800 px-6 py-4 rounded-full border border-slate-700">
-            <div className="flex -space-x-3">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-10 h-10 rounded-full border-2 border-slate-800 bg-slate-600 overflow-hidden">
-                  <img src={`https://picsum.photos/seed/face${i}/100/100`} alt="Client" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                </div>
-              ))}
-            </div>
-            <div className="text-left">
-              <p className="text-sm font-bold">Join 500+ Satisfied Clients</p>
-              <div className="flex items-center gap-1 text-amber-500 text-xs">
-                <Star className="w-3 h-3 fill-current" />
-                <Star className="w-3 h-3 fill-current" />
-                <Star className="w-3 h-3 fill-current" />
-                <Star className="w-3 h-3 fill-current" />
-                <Star className="w-3 h-3 fill-current" />
-                <span className="text-slate-400 ml-1">4.9/5 Rating</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
